@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        /* font-family: 'Poppins', sans-serif; */
+      }
+      #amazon-navbar {
+        height: 65px;
+        width: 100%;
+        border: 1px solid black;
+        background-color: black;
+        color: white;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      #logo {
+        height: 100%;
+        width: 8%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #location {
+        height: 100%;
+        width: 5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #search {
+        height: 100%;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #language {
+        height: 100%;
+        width: 5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #sign-in {
+        height: 100%;
+        width: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #orders {
+        height: 100%;
+        width: 5%;
+      }
+
+      #cart {
+        height: 100%;
+        width: 8%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #navbar-2 {
+        height: 43px;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        color: white;
+        background-color: #232f3e;
+        /* border: 1px solid black; */
+      }
+
+      #left {
+        height: auto;
+        width: 65%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      #left > .all:hover{
+        border: 1px solid white;
+        padding: 5px;
+      }
+
+      #left > span:hover {
+        /* color: white; */
+        border: 1px solid white;
+        padding: 5px;
+      }
+
+      #right {
+        height: auto;
+        width: 30%;
+        /* border: 1px solid red; */
+      }
+
+      #right > div > img:hover {
+        border: 1px solid white;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="amazon">
+      <div id="amazon-navbar">
+        <div id="logo">
+          <h1>amazon</h1>
+        </div>
+        <div id="location">
+          <i
+            style="padding-top: 8px; padding-right: 3px"
+            class="fa-solid fa-location-dot"
+          ></i>
+          <p style="font-size: 13px">Deliver to <b>India</b></p>
+        </div>
+        <div id="search">
+          <div
+            style="
+              height: auto;
+              width: auto;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            "
+          >
+            <p
+              id="category"
+              style="
+                height: 42px;
+                width: 55px;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                background-color: rgba(255, 255, 255, 0.901);
+                color: black;
+                font-size: 15px;
+                border-radius: 5px 0 0 5px;
+              "
+            >
+              All <i class="fa-sharp fa-solid fa-angle-down"></i>
+            </p>
+            <input
+              type="text"
+              style="width: 550px; height: 40px; border: none"
+              placeholder="Search Amazon"
+            />
+            <span
+              style="
+                height: 42px;
+                width: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgb(255, 156, 80);
+                border-radius: 0 5px 5px 0;
+              "
+              ><i
+                style="color: black; font-size: 25px"
+                class="fa-solid fa-magnifying-glass"
+              ></i
+            ></span>
+          </div>
+        </div>
+        <div id="language">
+          <i class="fa-sharp fa-regular fa-flag fa-2x"></i>
+          <p style="font-weight: 700; padding: 2px">EN</p>
+          <i
+            style="padding-top: 5px"
+            class="fa-sharp fa-solid fa-angle-down"
+          ></i>
+        </div>
+        <div id="sign-in">
+          <p>Hello, sign in <b> Account & Lists </b></p>
+          <i
+            style="padding-top: 18px"
+            class="fa-sharp fa-solid fa-angle-down"
+          ></i>
+        </div>
+        <div id="orders">
+          <p>
+            Returns <br />
+            <b>& Orders</b>
+          </p>
+        </div>
+        <div id="cart">
+          <i class="fa-sharp fa-solid fa-cart-shopping fa-2x"></i>
+          <b style="padding: 2px">Cart</b>
+        </div>
+      </div>
+      <d id="navbar-2">
+        <div id="left">
+        <div class="all">
+          <i  class="fa-solid fa-bars" style="padding-right: 2px;"></i>
+          <span>All</span>
+        </div>
+            <span>Amazon miniTV</span>
+            <span>Sell</span>
+            <span>Best Sellers</span>
+            <span>Today's Deals</span>
+            <span>Mobiles</span>
+            <span>Customer Service</span>
+            <span>Electronics</span>
+            <span>New Releases</span>
+            <span>Prime</span>
+          </div>
+        
+        <div id="right">
+          <div>
+            <img
+              style="width: 100%; height: 70%;"
+              src="
+          https://m.media-amazon.com/images/G/31/AmazonVideo/2021/X-site/SingleTitle/Air/400x39-SWM_NP._CB589429826_.jpg"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
