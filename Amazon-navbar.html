@@ -4,8 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   
-<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -14,8 +17,9 @@
       body {
         margin: 0;
         padding: 0;
-        /* font-family: 'Poppins', sans-serif; */
+        box-sizing: border-box;
       }
+
       #amazon-navbar {
         height: 65px;
         width: 100%;
@@ -27,12 +31,15 @@
         align-items: center;
       }
 
-      #logo {
+      #amazon-navbar > #logo {
+        height: 60px;
+        width: 120px;
+        padding-top: 6px;
+      }
+
+      #amazon-navbar > #logo > img {
         height: 100%;
-        width: 8%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        width: 100%;
       }
 
       #location {
@@ -87,7 +94,6 @@
         justify-content: space-around;
         color: white;
         background-color: #232f3e;
-        /* border: 1px solid black; */
       }
 
       #left {
@@ -98,13 +104,12 @@
         align-items: center;
       }
 
-      #left > .all:hover{
+      #left > .all:hover {
         border: 1px solid white;
         padding: 5px;
       }
 
       #left > span:hover {
-        /* color: white; */
         border: 1px solid white;
         padding: 5px;
       }
@@ -112,11 +117,174 @@
       #right {
         height: auto;
         width: 30%;
-        /* border: 1px solid red; */
       }
 
       #right > div > img:hover {
         border: 1px solid white;
+      }
+
+      @media screen and (max-width: 1300px) {
+        #search {
+          width: 45%;
+        }
+
+        #search-bar > input {
+          width: 400px !important;
+        }
+
+        #sign-in > p,
+        #orders > p {
+          font-size: 12px;
+        }
+      }
+
+      @media screen and (max-width: 1200px) {
+        #navbar-2 > #left > span {
+          display: none;
+        }
+
+        #navbar-2 > #left > .all > i,
+        span {
+          font-size: 25px;
+        }
+
+        #navbar-2 > #left {
+          width: 20%;
+        }
+
+        #navbar-2 {
+          justify-content: space-between;
+        }
+
+        #navbar-2 > #right {
+          width: 40%;
+        }
+
+        #navbar-2 > #right > div > img {
+          width: 100%;
+          height: 40px !important;
+        }
+      }
+
+      @media screen and (max-width: 1135px) {
+        #search {
+          width: 40%;
+        }
+
+        #search-bar > input {
+          width: 300px !important;
+        }
+      }
+
+      @media screen and (max-width: 1000px) {
+        #location,
+        #language {
+          display: none;
+        }
+
+        #search {
+          width: 45%;
+        }
+
+        #search-bar > input {
+          width: 300px !important;
+        }
+
+        #navbar-2 > #right {
+          width: 50%;
+        }
+      }
+
+      @media screen and (max-width: 900px) {
+        #search {
+          width: 40%;
+        }
+
+        #search-bar > input {
+          width: 250px !important;
+        }
+      }
+
+      @media screen and (max-width: 800px) {
+        #search {
+          width: 45%;
+        }
+        #orders,
+        #sign-in {
+          display: none;
+        }
+
+        #cart {
+          padding-left: 10px;
+        }
+      }
+
+      @media screen and (max-width: 600px) {
+        #search {
+          width: 45%;
+        }
+
+        #search-bar > input {
+          width: 200px !important;
+        }
+
+        @media screen and (max-width: 550px) {
+          #search {
+            width: 48%;
+          }
+
+          #search-bar > p {
+            height: 37px !important;
+            width: 50px !important;
+          }
+
+          #search-bar > span {
+            height: 37px !important;
+            width: 40px !important;
+          }
+
+          #search-bar > input {
+            height: 35px !important;
+            width: 150px !important;
+          }
+
+          #search-bar > p {
+            font-size: 14px !important;
+          }
+
+          #search-bar > span > i {
+            font-size: 17px !important;
+          }
+
+          #cart {
+            padding: 20px;
+          }
+        }
+
+        @media screen and (max-width: 530px) {
+          #search-bar > p {
+            display: none !important;
+          }
+
+          #search {
+            width: 40%;
+          }
+
+          #search-bar > input {
+            border-radius: 5px 0 0 5px;
+          }
+        }
+
+        @media screen and (max-width: 450px) {
+          #amazon-navbar > #logo {
+            height: 50px;
+            width: 100px;
+          }
+
+          #cart > i {
+            font-size: 25px !important;
+          }
+        }
       }
     </style>
   </head>
@@ -124,7 +292,7 @@
     <div id="amazon">
       <div id="amazon-navbar">
         <div id="logo">
-          <h1>amazon</h1>
+          <img src="./amazon-logo.png" />
         </div>
         <div id="location">
           <i
@@ -133,8 +301,10 @@
           ></i>
           <p style="font-size: 13px">Deliver to <b>India</b></p>
         </div>
+
         <div id="search">
           <div
+            id="search-bar"
             style="
               height: auto;
               width: auto;
@@ -160,6 +330,7 @@
               All <i class="fa-sharp fa-solid fa-angle-down"></i>
             </p>
             <input
+              id="input"
               type="text"
               style="width: 550px; height: 40px; border: none"
               placeholder="Search Amazon"
@@ -181,6 +352,7 @@
             ></span>
           </div>
         </div>
+
         <div id="language">
           <i class="fa-sharp fa-regular fa-flag fa-2x"></i>
           <p style="font-weight: 700; padding: 2px">EN</p>
@@ -207,27 +379,27 @@
           <b style="padding: 2px">Cart</b>
         </div>
       </div>
-      <d id="navbar-2">
+      <div id="navbar-2">
         <div id="left">
-        <div class="all">
-          <i  class="fa-solid fa-bars" style="padding-right: 2px;"></i>
-          <span>All</span>
-        </div>
-            <span>Amazon miniTV</span>
-            <span>Sell</span>
-            <span>Best Sellers</span>
-            <span>Today's Deals</span>
-            <span>Mobiles</span>
-            <span>Customer Service</span>
-            <span>Electronics</span>
-            <span>New Releases</span>
-            <span>Prime</span>
+          <div class="all">
+            <i class="fa-solid fa-bars" style="padding-right: 2px"></i>
+            <span>All</span>
           </div>
-        
+          <span>Amazon miniTV</span>
+          <span>Sell</span>
+          <span>Best Sellers</span>
+          <span>Today's Deals</span>
+          <span>Mobiles</span>
+          <span>Customer Service</span>
+          <span>Electronics</span>
+          <span>New Releases</span>
+          <span>Prime</span>
+        </div>
+
         <div id="right">
           <div>
             <img
-              style="width: 100%; height: 70%;"
+              style="width: 100%; height: 70%"
               src="
           https://m.media-amazon.com/images/G/31/AmazonVideo/2021/X-site/SingleTitle/Air/400x39-SWM_NP._CB589429826_.jpg"
             />
